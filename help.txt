@@ -11,7 +11,7 @@ requisitos:
 	docker rm ct_redis2 ct_web_node -f
 	
 
-		apinode_meuredis_1
+--rodar com docker-compose
 		
 		
 --para rodar o container customizado
@@ -24,4 +24,17 @@ requisitos:
 		
 	--redis-cli
 		docker run -it --link ct_redis:redis --rm redis redis-cli -h redis -p 6379
-		docker run -it --link apinode_meuredis_1:redis --rm redis redis-cli -h redis -p 6379
+		docker run -it --link meuredis:redis --rm redis redis-cli -h redis -p 6379
+		
+	
+--rodar com docker-swarm
+	-iniciar o cluster
+		docker swarm init
+		
+		
+		
+		
+		
+Duvidas:
+	Como fazer push pro docker hub de um docker compose?
+	
