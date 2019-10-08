@@ -2,18 +2,12 @@ version: '3'
 
 services: 
   meuservicoweb:
-    build: .
     ports: 
       - "8081:8081"  
-    links:
-      - meuredis
-    # depends_on:
-    #   - meuredis  
     environment:
       - IP_REDIS_FIAP=meuredis
-    restart: always #restarta o container a caso de erro. Para simular erro eh soh colocar um json invalido no redis
   
   meuredis:
-    image: redis:latest
+    image: redis
     ports: 
       - "6379:6379"   #expondo a porta para setar uma chave no redis.
