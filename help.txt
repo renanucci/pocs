@@ -19,9 +19,25 @@ requisitos:
 	docker-compose up --build	(para reconstruir os containers ou sem o --build apenas para starta-los)
 	
 		
---rodar com docker-swarm
-	-iniciar o cluster
-		docker swarm init
+--rodar com CLUSTER docker SWARM
+	--inicia uma maquina como MANAGER de um cluster	
+		docker swarm init --advertise-addr IP_DA_INSTANCIA_LOCAL
+
+	--pega o token para entrar em um cluster como manager
+		docker swarm join-token manager
+	
+	--pega o token para entrar em um cluster como worker
+		docker swarm join-token worker
+		
+	--adicionar nós ao cluster:
+		roda um dos comandos acima no manager, e depois vai no worker e roda a saida do comando la.
+		
+	--pra criar a stack 
+		-pode criar a partir do docker-compose.yml mas nao pode ter a propriedade BUILD tem de ser IMAGE (referenciar o docker hub)
+		
+		-criar o arquivo stack.yml e executar ele.
+			
+		
 		
 		
 		

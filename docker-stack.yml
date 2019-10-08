@@ -6,6 +6,13 @@ services:
       - "8081:8081"  
     environment:
       - IP_REDIS_FIAP=meuredis
+    depends_on:
+      - meuredis  
+    deploy:
+      replicas: 3
+      mode: replicated
+      restart_policy:
+      condition: on-failure
   
   meuredis:
     image: redis
