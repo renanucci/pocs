@@ -1,0 +1,4 @@
+requisitos:
+	variavel de ambiente 
+		IP_REDIS_FIAP com valor do host onde roda o redis (deve rodar default na porta 6379)
+		

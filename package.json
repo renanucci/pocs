@@ -1,0 +1,14 @@
+{
+  "name": "fiap_node_redis",
+  "version": "1.0.0",
+  "description": "api em node para ser a imagem docker customizada",
+  "main": "helloworld.js",
+  "scripts": {
+    "start": "node helloworld.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "renanucci",
+  "dependencies": {
+    "ioredis": "^4.14.1"
+  }
+}
