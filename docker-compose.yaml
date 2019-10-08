@@ -1,0 +1,16 @@
+version: '2'
+services: 
+  depends_on:
+    - meuredis
+  web:
+    build: .
+      context: .
+      dockerfile: dockerfile
+    enviroment:
+      IP_REDIS_FIAP: "meuredis"
+    ports: 
+      - "8081:8081"    
+
+  
+  meuredis:
+    image: redis
