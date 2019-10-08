@@ -3,7 +3,7 @@ FROM node:10
 WORKDIR /usr/src/app
 COPY . .
 
-#ENV IP_REDIS_FIAP 192.168.99.100
+# ENV IP_REDIS_FIAP meuredis
 
 RUN npm install
 
