@@ -1,9 +1,12 @@
 var http = require('http');
 var ioredis = require('ioredis');
+var os = require("os");
 
 http.createServer(function (req, res) 
 {
-  console.log("v1.7");
+  var hostname = os.hostname();
+  console.log("v1.7 rodando no host: ["+hostname+"]");
+
   console.log('inicando response para a URL ['+req.url+']----------------------------------------------------');
   if(req.url != "/" && req.url != "/favicon.ico")
   {

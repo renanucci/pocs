@@ -9,6 +9,7 @@
   },
   "author": "renanucci",
   "dependencies": {
-    "ioredis": "^4.14.1"
+    "ioredis": "^4.14.1",
+    "os": "^0.1.1"
   }
 }
