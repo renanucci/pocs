@@ -12,7 +12,7 @@ services:
       replicas: 3
       mode: replicated
       restart_policy:
-      condition: on-failure
+        condition: on-failure
   
   meuredis:
     image: redis
