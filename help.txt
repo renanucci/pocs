@@ -3,6 +3,11 @@ requisitos:
 		IP_REDIS_FIAP com valor do host onde roda o redis (deve rodar default na porta 6379)
 		
 		
+--rodar com rede
+	docker network create rede_web_redis
+	docker run --name ct_redis -p 6379:6379 --network rede_web_redis redis redis-server --appendonly yes
+	docker run -p 8081:8081 --env IP_REDIS_FIAP=ct_redis --network rede_web_redis renanucci/pocs:1.0 
+		
 --para rodar o container customizado
 	docker run --env IP_REDIS_FIAP=192.168.99.100 -p 8081:8081 renanucci/pocs:1.0 
 	
